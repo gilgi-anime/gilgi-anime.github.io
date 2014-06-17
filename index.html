@@ -91,6 +91,18 @@ $( document ).ready(function() {
 function saveDetails(data) {
   details = data;
 }
+
+// check for window resize
+jQuery(function($){
+var windowWidth = $(window).width();
+
+$(window).resize(function() {
+    if(windowWidth != $(window).width()){
+    location.reload();
+    return;
+    }
+});
+});
 </script>
 
 <title>Spring 2014 Anime Hype Ladder</title>
@@ -98,7 +110,15 @@ function saveDetails(data) {
 
 <body>
 <div class='container' style='height: 100%;'>
+
+<!-- Chart -->
 <div style='height: 100%;' id='chart'></div>
+
+<!-- Directions -->
+<div class="well">
+<small><em>Hints:</em> Click on any point to get details for that episode. Click on a week number for that week's complete hype ladder. Click on a title in the legend to highlight that anime's journey through time and hype. Resizing your browser window triggers a DOM redraw because I suck. Built by <a href="http://sclabs.gilgi.org">Scoot's Canoe Labs</a>, powered by <a href="https://developers.google.com/chart/">Google Charts</a>, and hosted by <a href="https://pages.github.com/">GitHub Pages</a>. Content &copy; 2014 Gilgi.org Network.</small>
+</div>
+
 </div>
 
 <!-- Modal -->
