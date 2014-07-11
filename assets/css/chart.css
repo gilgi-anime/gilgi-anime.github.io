@@ -2,6 +2,11 @@ html, body {
     min-height: 100%;
 }
 
-.container, #chart {
+.container {
+    height: 100%;
+    margin-top: -100px;
+}
+
+#chart {
     height: 100%;
 }
