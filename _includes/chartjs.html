@@ -18,7 +18,7 @@ function handleQueryResponse(response) {
 
   data = response.getDataTable();
   chart = new google.visualization.LineChart(document.getElementById('chart'));
-  chart.draw(data, {title: '{{ page.charttitle }}', pointSize: 4, hAxis: {title: 'Week', format: '#', viewWindow: {min: 2, max: data.getNumberOfRows() + 1}, gridlines: {count: data.getNumberOfRows()}}, vAxis: {title: 'Hype Rating', gridlines: {count: 6}, viewWindow: {min: 5}}});
+  chart.draw(data, {title: '{{ page.charttitle }}', pointSize: 4, hAxis: {title: 'Week', format: '#', viewWindow: {min: 1, max: data.getNumberOfRows()}, gridlines: {count: data.getNumberOfRows()}}, vAxis: {title: 'Hype Rating', gridlines: {count: 6}, viewWindow: {min: 5, max:10}}});
   
   // Add our selection handler.
   google.visualization.events.addListener(chart, 'select', selectHandler);
